@@ -49,7 +49,8 @@
 				<nav id="main-nav">
 
 					<ul class="clearfix">
-						<li><a href="/cart" rel="nofollow">Carrinho (${carrinhoCompras.quantidade}) </a></li>
+						<li><a href="/cart" rel="nofollow">Carrinho
+								(${carrinhoCompras.quantidade}) </a></li>
 
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre
 								Nós</a></li>
@@ -84,7 +85,7 @@
 		<header id="product‐highlight" class="clearfix">
 			<div id="product‐overview" class="container">
 				<img itemprop="image" width="280px" height="395px"
-					src="http://cdn.shopify.com/s/files/1/0155/7645/products/css‐eficiente‐featured_large.png?v=1435245145" />
+					src="${contextPath}resources/imagens/java8.png" />
 				<h1 class="product‐title" itemprop="name">${produto.titulo}</h1>
 				<p class="product‐author">
 					<span class="product‐author‐link"> </span>
@@ -94,20 +95,23 @@
 		</header>
 
 		<section class="buy-options clearfix">
-			<form action='<c:url value="/carrinho/add" />' method="post" class="container">
+			<form action='<c:url value="/carrinho/add" />' method="post"
+				class="container">
 				<ul id="variants" class="clearfix">
 					<input type="hidden" name="produtoId" value="${produto.id}" />
 					<c:forEach items="${produto.precos}" var="preco">
-						<li class="buy‐option">
-						<input type="radio" name="tipo"	class="variant‐radio" id="tipoPreco" value="${preco.tipo}" checked="checked" /> 
-							<label class="variant‐label">
+						<li class="buy‐option preco"><input type="radio" name="tipo"
+							class="variant‐radio" id="tipoPreco" value="${preco.tipo}"
+							checked="checked" /> <label class="variant‐label">
 								${preco.tipo} </label> <small class="compare‐at‐price">R$ 39,90</small>
-							<p class="variant‐price">${preco.valor}</p>
-						</li>
+							<p class="variant‐price">${preco.valor}</p></li>
 					</c:forEach>
 				</ul>
-				<button type="submit" class="submit‐image icon‐basket‐alt" style="width: 100px; height: 40px;"
-					alt="Compre Agora" title="Compre Agora${produto.titulo}">Compre Agora</button>
+				<div class="comprar">
+					<button type="submit" class="submit‐image icon‐basket‐alt"
+						style="width: 150px; height: 70px;" alt="Compre Agora"
+						title="Compre Agora${produto.titulo}">Compre Agora</button>
+				</div>
 			</form>
 
 
@@ -128,8 +132,9 @@
 					Número de páginas: <span>${produto.paginas}</span>
 				</p>
 				<p></p>
-				<p>Data de publicação: 
-					<span><fmt:formatDate pattern="dd/MM/yyyy" value="${produto.dataLancamento.time}" /></span>
+				<p>
+					Data de publicação: <span><fmt:formatDate
+							pattern="dd/MM/yyyy" value="${produto.dataLancamento.time}" /></span>
 				</p>
 				<p>
 					Encontrou um erro? <a href='/submissao‐errata' target='_blank'>Submeta
