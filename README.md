@@ -1,6 +1,6 @@
 "# CasaDoCodigo_Java" 
 
-Este projeto contempla o curso da Alura "Curso Spring MVC I Criando aplicações web", que introduz o Framework Spring MVC, passando por pontos como:
+Este projeto contempla dois da Alura, "Curso Spring MVC I Criando aplicações web" e "Curso Spring MVC II Integração, cache, segurança e templates", que introduz o Framework Spring MVC chegando até um nivel intermediário, passando por pontos como:
 
   * Configurações do Spring;
   * Mapeamentos;
