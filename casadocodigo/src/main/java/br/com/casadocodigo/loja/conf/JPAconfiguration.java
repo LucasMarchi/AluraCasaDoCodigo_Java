@@ -23,15 +23,23 @@ public class JPAconfiguration {
         factoryBean.setJpaVendorAdapter(vendorAdapter);
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUsername("root");
-        dataSource.setPassword("");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo");
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        // MySql
+//        dataSource.setUsername("root");
+//        dataSource.setPassword("");
+//        dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo");
+//        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        
+        // Oracle
+        dataSource.setUsername("casadocodigo");
+        dataSource.setPassword("casadocodigo");
+        dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+        dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
 
         factoryBean.setDataSource(dataSource);
 
         Properties props = new Properties();
-        props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        //props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect"); 
+        props.setProperty("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
         props.setProperty("hibernate.show_sql", "true");
         props.setProperty("hibernate.hbm2ddl.auto", "update");
 
