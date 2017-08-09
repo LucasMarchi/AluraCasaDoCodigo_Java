@@ -17,8 +17,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Produto {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY) MySql
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //MySql, Postgre
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE) //Oracle
     private int id;
     private String titulo;
     private String descricao;
