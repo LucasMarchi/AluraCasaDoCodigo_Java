@@ -10,3 +10,5 @@ Este projeto contempla dois cursos da Alura, "Curso Spring MVC I Criando aplica�
   * Arquitetura MVC;
   * Validações;
   * Requisições a API's de terceiros;
+  * Spring Security
+  * Deploy integrando git e Heroku
