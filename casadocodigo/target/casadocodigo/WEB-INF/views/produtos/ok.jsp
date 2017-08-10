@@ -1,9 +1,3 @@
-<%-- 
-    Document   : form
-    Created on : 02/06/2017, 12:07:32
-    Author     : henri
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
